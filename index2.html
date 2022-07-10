@@ -67,19 +67,26 @@ span{margin:0 5px 0 15px}
 <body >
   
      
-  <form action="mailto:patelraghavkumar222@gmail.com" method="post" enctype="text/plain" class="form">
+  <form onsubmit="sendEmail();reset(); return false;"    method="post" enctype="text/plain" class="form">
        <h2>Get In Touch</h2>
         <p>Your Name: </p>
-        <input class="input"type="text" name="your name">
+        <input class="input"type="text" id="name" name="your name" required>
         <br>
         <p>Your Email:</p>
-        <input class="input" type="email" name="your email ">
+        <input class="input" type="email" id="mail" name="your email " required>
         <br>
         <p>Your Message</p>
-      <input name="your message" class="input" type="text" rows="1" cols="30" >
+      <input name="your message" class="input" id="message" type="text" rows="1" cols="30"required >
     
-        <input type="submit" class="BUTTON_UYO" >
-    </form>
+     <input type="submit" class="BUTTON_UYO" >
   
-</form>
+  </form>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+      function sendEmail(){
+
+           alert("submit successfully,Meet you soon...");
+      }
+  </script>
+</body>
 </html>
